@@ -22,7 +22,19 @@
 
 ## Statistics & Machine Learning
 
+- [StatQuest!!!](https://statquest.org/video-index/)
+
 - [Introduction to Statistical Learning](https://www.youtube.com/playlist?list=PLoROMvodv4rOzrYsAxzQyHb8n_RWNuS1e)
+
+- [Introduction to Data Science](http://rafalab.dfci.harvard.edu/dsbook-part-1/)
+
+- [Advanced Data Science](http://rafalab.dfci.harvard.edu/dsbook-part-2/)
+
+- [Introduction to Machine Learning for Coders!](https://course18.fast.ai/ml.html)
+
+- [Practical Deep Learning For Coders, Part 1](https://course18.fast.ai/index.html)
+
+- [Cutting Edge Deep Learning For Coders, Part 2](https://course18.fast.ai/part2.html)
 
 ## Omics
 
