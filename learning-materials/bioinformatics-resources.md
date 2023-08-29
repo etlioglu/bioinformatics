@@ -18,6 +18,10 @@
 
 ### Python
 
+- [Pytest for Beginners](https://testdriven.io/blog/pytest-for-beginners/)
+
+- [Python Virtual Environments: A Primer](https://realpython.com/python-virtual-environments-a-primer/)
+
 ### R
 
 ## Statistics & Machine Learning
