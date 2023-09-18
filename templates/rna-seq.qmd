@@ -1,0 +1,74 @@
+---
+title: "D63-E18 - Lotte Vingerhoets"
+author: "H. Emre Etlioglu"
+format:
+  html:
+    self-contained: true
+    toc: true
+    code-fold: true
+    code-summary: "Show the code"
+    page-layout: full
+editor: visual
+---
+
+## RNA-seq
+
+This report mainly makes use of `DESeq2` and closely resembles its following vignettes:
+
+- [RNA-seq workflow: gene-level exploratory analysis and differential expression](http://master.bioconductor.org/packages/release/workflows/vignettes/rnaseqGene/inst/doc/rnaseqGene.html)
+- [Analyzing RNA-seq data with DESeq2](https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html)
+
+The sections below are in line with the first one.
+
+## 1. Introduction
+
+### 1.1 Set-up
+
+Load libraries
+
+## 2. Data and meta-data
+
+### 2.1 Preprocessing
+
+```{bash}
+#| eval: false
+
+nohup nextflow run nf-core/rnaseq \
+  -revision 3.12.0 \
+  --input ../../generate-sample-sheet/sample_sheet.csv \
+  --outdir . \
+  --fasta /home/eetlioglu/references/GRCm39-Ensembl/release-109/Mus_musculus.GRCm39.dna_sm.primary_assembly.fa.gz \
+  --gtf /home/eetlioglu/references/GRCm39-Ensembl/release-109/Mus_musculus.GRCm39.109.gtf.gz \
+  --save reference \
+  --extra_salmon_quant_args \"--gcBias\" \
+  --email emre.etlioglu@sckcen.be \
+  -profile docker \
+  -resume \
+  > nohup-nextflow.out \
+  2> nohup-nextflow.err
+```
+
+## 3. DESeq2 object creation
+
+## 4. Exploratory data analysis
+
+### 4.1 Pre-filtering
+
+### 4.2 The variance stabilizing transformation (VST)
+
+### 4.3 Sample distances
+
+### 4.4 PCA plot(s)
+
+## 5. Differential expression analysis
+
+## 6. Plots
+
+## 7. Exporting results
+
+## 8. Session Info
+
+```{r}
+
+sessionInfo()
+```
