@@ -54,8 +54,10 @@
 
 - [Orchestrating Spatially-Resolved Transcriptomics Analysis with Bioconductor - OSTA](https://lmweber.org/OSTA-book/)
 
-### Single-cell 
+### Single-cell
 
 - [Single-cell best practices](https://www.sc-best-practices.org/preamble.html)
 
 - [Analysis of single cell RNA-seq data](https://www.singlecellcourse.org/index.html)
+
+- [Bioconductor workflow for single-cell RNA sequencing: Normalization, dimensionality reduction, clustering, and lineage inference](https://www.bioconductor.org/help/course-materials/2017/BioC2017/Day2/Workshops/singleCell/doc/workshop.html)
