@@ -1,6 +1,6 @@
-# Bioinformatics related resources
+# Resources for learning/mastering bioinformatics
 
-### General
+## General
 
 - [Teaching materials at the Harvard Chan Bioinformatics Core](https://github.com/hbctraining)
 
