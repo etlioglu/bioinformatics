@@ -24,9 +24,13 @@
 
 ### R
 
+- [Rexercises](https://www.r-exercises.com/)
+
 ## Statistics & Machine Learning
 
 - [StatQuest!!!](https://statquest.org/video-index/)
+
+- [DataSchool](https://www.dataschool.io/)
 
 - [Introduction to Statistical Learning](https://www.youtube.com/playlist?list=PLoROMvodv4rOzrYsAxzQyHb8n_RWNuS1e)
 
