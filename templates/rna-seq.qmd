@@ -1,5 +1,5 @@
 ---
-title: "D63-E18 - Lotte Vingerhoets"
+title: ""
 author: "H. Emre Etlioglu"
 format:
   html:
@@ -13,62 +13,47 @@ editor: visual
 
 ## RNA-seq
 
-This report mainly makes use of `DESeq2` and closely resembles its following vignettes:
+### Report version: 1.0
 
-- [RNA-seq workflow: gene-level exploratory analysis and differential expression](http://master.bioconductor.org/packages/release/workflows/vignettes/rnaseqGene/inst/doc/rnaseqGene.html)
-- [Analyzing RNA-seq data with DESeq2](https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html)
+### What is different from the previous version:
 
-The sections below are in line with the first one.
+## 0. Set-up
 
 ## 1. Introduction
 
-### 1.1 Set-up
+### 1.1 Questions/hypotheses from the researcher
 
-Load libraries
+Contrasts to be performed:
 
-## 2. Data and meta-data
+## 2. Input to DESeq2
 
-### 2.1 Preprocessing
+### 2.1 Read count generation
 
-```{bash}
-#| eval: false
+### 2.2 Count data
 
-nohup nextflow run nf-core/rnaseq \
-  -revision 3.12.0 \
-  --input ../../generate-sample-sheet/sample_sheet.csv \
-  --outdir . \
-  --fasta /home/eetlioglu/references/GRCm39-Ensembl/release-109/Mus_musculus.GRCm39.dna_sm.primary_assembly.fa.gz \
-  --gtf /home/eetlioglu/references/GRCm39-Ensembl/release-109/Mus_musculus.GRCm39.109.gtf.gz \
-  --save reference \
-  --extra_salmon_quant_args \"--gcBias\" \
-  --email emre.etlioglu@sckcen.be \
-  -profile docker \
-  -resume \
-  > nohup-nextflow.out \
-  2> nohup-nextflow.err
-```
+### 2.3 Sample meta-data
 
-## 3. DESeq2 object creation
+### 2.4 Gene meta-data
+
+## 3.4 DESeq2 object creation
 
 ## 4. Exploratory data analysis
 
 ### 4.1 Pre-filtering
 
-### 4.2 The variance stabilizing transformation (VST)
-
 ### 4.3 Sample distances
 
-### 4.4 PCA plot(s)
+### 4.4 PCA Plots
+
+#### 4.4.1 Non-interactive
+
+#### 4.4.2 Interactive
 
 ## 5. Differential expression analysis
 
-## 6. Plots
+## 6 Session Info
 
-## 7. Exporting results
-
-## 8. Session Info
-
-```{r}
+```{r session-info}
 
 sessionInfo()
 ```
