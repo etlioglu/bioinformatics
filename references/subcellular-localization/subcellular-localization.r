@@ -9,4 +9,9 @@ int_sub_cell_loc <- read.delim("comppi--proteins_locs--tax_hsapiens_loc_all.txt"
   dplyr::select(c("ensembl_id", "Major.Loc.With.Loc.Score", "Minor.Loc")) |>
   distinct()
 
-write.csv(int_sub_cell_loc, "int_sub_cell_loc.csv")
+write.csv(
+  int_sub_cell_loc,
+  "int_sub_cell_loc.csv",
+  quote = FALSE,
+  row.names = FALSE
+)
