@@ -1,6 +1,12 @@
 # bioMart seems to still have not-at-all-informative attribute names for the cellular localization GO terms
 # https://support.bioconductor.org/p/39425/#39426
 
+
+# "human_compartment_integrated_full.tsv" from https://download.jensenlab.org/
+# "human_compartment_experiments_full.tsv" from https://download.jensenlab.org/
+
+# "subcellular_location.tsv.zip" from https://www.proteinatlas.org/about/download
+
 # Integrated subcellular localization dataset from http://comppi.linkgroup.hu/downloads
 library(tidyverse)
 
