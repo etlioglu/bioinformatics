@@ -5,7 +5,7 @@
 library(ggplot2)
 
 ditto_seq_40 <-
-  (
+  c(
     "#E69F00",
     "#56B4E9",
     "#009E73",
