@@ -15,9 +15,60 @@ editor: visual
 
 ### Report version: 1.0
 
-### What is different from the previous version:
+### What is different from the previous version
+
+### About the analyses performed
+
+The heavy lifting is mainly done by `DESeq2` and this report closely resembles its following vignettes:
+
+-   [RNA-seq workflow: gene-level exploratory analysis and differential expression](http://master.bioconductor.org/packages/release/workflows/vignettes/rnaseqGene/inst/doc/rnaseqGene.html)
+-   [Analyzing RNA-seq data with DESeq2](https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html)
 
 ## 0. Set-up
+
+```{r set-up}
+
+
+```
+
+```{r customize-plots}
+
+gradient_col_palette <- viridis(100)
+
+# from scCustomize::ColorBlind_Pal()
+large_disc_col_pal <-
+  c(
+    "#F0A0FFFF",
+    "#0075DCFF",
+    "#993F00FF",
+    "#4C005CFF",
+    "#191919FF",
+    "#005C31FF",
+    "#2BCE48FF",
+    "#FFCC99FF",
+    "#808080FF",
+    "#94FFB5FF",
+    "#8F7C00FF",
+    "#9DCC00FF",
+    "#C20088FF",
+    "#003380FF",
+    "#FFA405FF",
+    "#FFA8BBFF",
+    "#426600FF",
+    "#FF0010FF",
+    "#5EF1F2FF",
+    "#00998FFF",
+    "#E0FF66FF",
+    "#740AFFFF",
+    "#990000FF",
+    "#FFFF80FF",
+    "#FFE100FF",
+    "#FF5005FF"
+  )
+
+options(ggplot2.discrete.colour = large_disc_col_pal)
+theme_set(theme_bw())
+```
 
 ## 1. Introduction
 
@@ -40,6 +91,13 @@ Contrasts to be performed:
 ## 4. Exploratory data analysis
 
 ### 4.1 Pre-filtering
+
+### 4.2 variance stabilizing transformation
+
+```{r vst}
+
+vsd <- vst(dds, blind = TRUE)
+```
 
 ### 4.3 Sample distances
 
