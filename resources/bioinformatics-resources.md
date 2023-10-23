@@ -8,6 +8,8 @@
 
 - [Bioinformatics Algorithms](https://www.bioinformaticsalgorithms.org/)
 
+- [Tutorial:Survival analysis with gene expression](https://www.biostars.org/p/344233/)
+
 ## Programming
 
 ### Introduction to Programming
@@ -34,6 +36,8 @@
 
 - [Introduction to Statistical Learning](https://www.youtube.com/playlist?list=PLoROMvodv4rOzrYsAxzQyHb8n_RWNuS1e)
 
+- [An Introduction to Statistical Learning Unofficial Solutions](https://blog.princehonest.com/stat-learning/)
+
 - [Introduction to Data Science](http://rafalab.dfci.harvard.edu/dsbook-part-1/)
 
 - [Advanced Data Science](http://rafalab.dfci.harvard.edu/dsbook-part-2/)
@@ -46,7 +50,7 @@
 
 ## Omics
 
-## Proteomics
+### Proteomics
 
 [Proteomics Data Analysis (PDA)](https://statomics.github.io/PDA/)
 
