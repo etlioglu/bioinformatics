@@ -1,0 +1,153 @@
+---
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r}
+project_abbreviation <- "EXT"
+report_title <- paste(project_abbreviation, "10x QC Report")
+```
+
+---
+title: `r report_title`
+---
+
+```{r setup, include=FALSE}
+library(data.table)
+library(flexdashboard)
+library(ggplot2)
+library(bsselectR)
+```
+
+```{r data, include=FALSE}
+my_df <- data.frame()
+
+for (i in list.files(pattern = project_abbreviation)) {
+  
+  temp_path <- paste0(i,"/outs/metrics_summary.csv")
+  
+  temp_df <- fread(temp_path)
+  
+  my_df <- rbind(my_df,
+                 temp_df)
+}
+
+my_df$sample <- list.files(pattern = project_abbreviation)
+
+# this is necessary to be able to subset as qc_data[,count_cols]
+# data.tables behave differently and expect qc_data[,count_cols, with=FALSE]
+qc_data <- as.data.frame(my_df)
+
+write.table(qc_data,
+            "qc-10x.csv")
+
+count_cols <- c("Estimated Number of Cells",
+                "Mean Reads per Cell",
+                "Median Genes per Cell",
+                "Number of Reads",
+                "Total Genes Detected",
+                "Median UMI Counts per Cell")
+
+qc_data[,count_cols] <- apply(qc_data[,count_cols],
+                              2,
+                              function(x) as.integer(gsub(",", "", x)))
+
+percent_cols <- c("Valid Barcodes",                                
+                  "Sequencing Saturation",                         
+                  "Q30 Bases in Barcode",                          
+                  "Q30 Bases in RNA Read",                         
+                  "Q30 Bases in Sample Index",                     
+                  "Q30 Bases in UMI",                              
+                  "Reads Mapped to Genome",                        
+                  "Reads Mapped Confidently to Genome",            
+                  "Reads Mapped Confidently to Intergenic Regions",
+                  "Reads Mapped Confidently to Intronic Regions",  
+                  "Reads Mapped Confidently to Exonic Regions",    
+                  "Reads Mapped Confidently to Transcriptome",     
+                  "Reads Mapped Antisense to Gene",                
+                  "Fraction Reads in Cells")
+
+qc_data[,percent_cols] <- apply(qc_data[,percent_cols],
+                              2,
+                              function(x) as.integer(gsub("%", "", x)))
+```
+
+```{r}
+dir.create("qc_plots")
+
+for (i in names(qc_data)[2:dim(qc_data)[2]-1]) {
+  my_plot <- ggplot(qc_data, aes(x = sample,
+                              y = qc_data[[i]])) +
+    geom_col(fill = c("#CC6666")) +
+    labs(x = "Sample",
+         y = i) +
+    theme_minimal() +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1))
+  
+  ggsave(paste0("qc_plots/",i,".png"), my_plot, dpi = 2000) }
+
+my_plots <- list.files(path = "qc_plots", pattern = "png", full.names = TRUE)
+names(my_plots) <- list.files(path = "qc_plots", pattern = "png")
+names(my_plots) <- sub("\\.png", "", names(my_plots))
+names(my_plots) <- gsub("\\.", " ", names(my_plots))
+```
+
+Column {data-width=500}
+-----------------------------------------------------------------------
+
+### Chart one
+
+```{r}
+bsselect(my_plots,
+         type = "img",
+         selected = "Estimated Number of Cells", 
+         live_search = FALSE,
+         frame_width = "100%",
+         show_tick = FALSE,
+         frame_height = 250,
+         dropup_auto = FALSE)
+```
+
+### Chart two
+
+```{r}
+bsselect(my_plots,
+         type = "img",
+         selected = "Number of Reads", 
+         live_search = FALSE,
+         frame_width = "100%",
+         show_tick = FALSE,
+         frame_height = 250,
+         dropup_auto = FALSE)
+```
+
+Column {data-width=500}
+-----------------------------------------------------------------------
+
+### Chart three
+
+```{r}
+bsselect(my_plots,
+         type = "img",
+         selected = "Sequencing Saturation", 
+         live_search = FALSE,
+         frame_width = "100%",
+         show_tick = FALSE,
+         frame_height = 250,
+         dropup_auto = FALSE)
+```
+
+### Chart four
+
+```{r}
+bsselect(my_plots,
+         type = "img",
+         selected = "Reads Mapped Confidently to Exonic Regions", 
+         live_search = FALSE,
+         frame_width = "100%",
+         show_tick = FALSE,
+         frame_height = 250,
+         dropup_auto = FALSE)
+```
