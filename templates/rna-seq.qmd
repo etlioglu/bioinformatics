@@ -28,7 +28,10 @@ The heavy lifting is mainly done by `DESeq2` and this report closely resembles i
 
 ```{r set-up}
 
+library(ggplot2)
 
+# customization for ggplot
+source("https://raw.githubusercontent.com/etlioglu/bioinformatics/main/templates/customize-ggplot.r")
 ```
 
 ```{r customize-plots}
