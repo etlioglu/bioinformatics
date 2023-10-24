@@ -30,7 +30,7 @@ The heavy lifting is mainly done by `DESeq2` and this report closely resembles i
 
 library(ggplot2)
 
-# customization for ggplot
+# customize ggplot
 source("https://raw.githubusercontent.com/etlioglu/bioinformatics/main/templates/customize-ggplot.r")
 ```
 
