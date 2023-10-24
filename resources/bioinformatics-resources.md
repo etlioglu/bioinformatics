@@ -69,3 +69,7 @@
 - [Analysis of single cell RNA-seq data](https://www.singlecellcourse.org/index.html)
 
 - [Bioconductor workflow for single-cell RNA sequencing: Normalization, dimensionality reduction, clustering, and lineage inference](https://www.bioconductor.org/help/course-materials/2017/BioC2017/Day2/Workshops/singleCell/doc/workshop.html)
+
+## Nextflow
+
+- [Introduction to Bioinformatics workflows with Nextflow and nf-core](https://carpentries-incubator.github.io/workflows-nextflow/index.html)
