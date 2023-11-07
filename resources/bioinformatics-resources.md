@@ -82,4 +82,4 @@
 
 - [Nextflow Training](https://training.nextflow.io/)
 
-- [Reproducible workflows with nf-core]https://sydney-informatics-hub.github.io/customising-nfcore-workshop/)
+- [Reproducible workflows with nf-core](https://sydney-informatics-hub.github.io/customising-nfcore-workshop/)
