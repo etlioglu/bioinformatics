@@ -10,5 +10,8 @@
 
         nohup Rscript my-r-script.r > output.out 2> error.err &
 
-- to see if the design of the experiment is confounded: qr(X)$rank
-X is the design matrix
+- to see if the design of the experiment is confounded:
+
+        # X is the design matrix
+        qr(X)$rank
+        
