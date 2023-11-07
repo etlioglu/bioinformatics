@@ -26,6 +26,10 @@
 
 ### R
 
+### Bioinformatics Algorithms
+
+- [Rosalind](https://rosalind.info/problems/locations/)
+
 - [Rexercises](https://www.r-exercises.com/)
 
 ## Statistics & Machine Learning
@@ -50,6 +54,8 @@
 
 ## Omics
 
+- [Statistical Genomics Analysis 2021-2022](https://statomics.github.io/SGA21/index.html)
+
 ### Proteomics
 
 [Proteomics Data Analysis (PDA)](https://statomics.github.io/PDA/)
@@ -73,3 +79,7 @@
 ## Nextflow
 
 - [Introduction to Bioinformatics workflows with Nextflow and nf-core](https://carpentries-incubator.github.io/workflows-nextflow/index.html)
+
+- [Nextflow Training](https://training.nextflow.io/)
+
+- [Reproducible workflows with nf-core]https://sydney-informatics-hub.github.io/customising-nfcore-workshop/)
