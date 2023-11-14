@@ -1,0 +1,52 @@
+Nov-11 14:03:51.812 [main] DEBUG nextflow.cli.Launcher - $> nextflow run wc.nf
+Nov-11 14:03:51.868 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 23.04.4
+Nov-11 14:03:51.891 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/eetlioglu/.nextflow/plugins; core-plugins: nf-amazon@1.16.2,nf-azure@1.0.1,nf-codecommit@0.1.4,nf-console@1.0.5,nf-ga4gh@1.0.5,nf-google@1.7.3-patch1,nf-tower@1.5.12,nf-wave@0.8.4
+Nov-11 14:03:51.901 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Nov-11 14:03:51.902 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Nov-11 14:03:51.906 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Nov-11 14:03:51.917 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Nov-11 14:03:51.989 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
+Nov-11 14:03:52.010 [main] INFO  nextflow.cli.CmdRun - Launching `wc.nf` [stupefied_kalman] DSL2 - revision: 0ab2ae2797
+Nov-11 14:03:52.010 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Nov-11 14:03:52.010 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Nov-11 14:03:52.020 [main] DEBUG nextflow.secret.LocalSecretsProvider - Secrets store: /home/eetlioglu/.nextflow/secrets/store.json
+Nov-11 14:03:52.027 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@3068b369] - activable => nextflow.secret.LocalSecretsProvider@3068b369
+Nov-11 14:03:52.095 [main] DEBUG nextflow.Session - Session UUID: 67aecd00-f37b-4262-a2e8-ebf5c24eb95a
+Nov-11 14:03:52.095 [main] DEBUG nextflow.Session - Run name: stupefied_kalman
+Nov-11 14:03:52.096 [main] DEBUG nextflow.Session - Executor pool size: 56
+Nov-11 14:03:52.108 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=168; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Nov-11 14:03:52.156 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 23.04.4 build 5881
+  Created: 25-09-2023 15:34 UTC (17:34 CEST)
+  System: Linux 3.10.0-862.14.4.el7.x86_64
+  Runtime: Groovy 3.0.16 on OpenJDK 64-Bit Server VM 11.0.18+10-LTS
+  Encoding: UTF-8 (UTF-8)
+  Process: 159187@ehs1.linux.sck.be [10.2.20.1]
+  CPUs: 56 - Mem: 251.6 GB (128.1 GB) - Swap: 8 GB (748 KB)
+Nov-11 14:03:52.197 [main] DEBUG nextflow.Session - Work-dir: /srv/home/eetlioglu/analyses/emre-etlioglu/bioinformatics/notes/nextflow/the-carpentries-nextflow-practical/work [xfs]
+Nov-11 14:03:52.197 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /srv/home/eetlioglu/analyses/emre-etlioglu/bioinformatics/notes/nextflow/the-carpentries-nextflow-practical/bin
+Nov-11 14:03:52.213 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Nov-11 14:03:52.228 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Nov-11 14:03:52.254 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Nov-11 14:03:52.267 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 57; maxThreads: 1000
+Nov-11 14:03:52.406 [main] DEBUG nextflow.Session - Session start
+Nov-11 14:03:53.050 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Nov-11 14:03:53.144 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-11 14:03:53.144 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-11 14:03:53.151 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Nov-11 14:03:53.157 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=56; memory=251.6 GB; capacity=56; pollInterval=100ms; dumpInterval=5m
+Nov-11 14:03:53.294 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: NUM_LINES
+Nov-11 14:03:53.294 [main] DEBUG nextflow.Session - Igniting dataflow network (2)
+Nov-11 14:03:53.300 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NUM_LINES
+Nov-11 14:03:53.300 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Nov-11 14:03:53.300 [main] DEBUG nextflow.Session - Session await
+Nov-11 14:03:53.385 [Actor Thread 5] DEBUG nextflow.util.CacheHelper - Unable to get file attributes file: /srv/home/eetlioglu/analyses/emre-etlioglu/bioinformatics/notes/nextflow/the-carpentries-nextflow-practical/data/yeast/reads/ref1_1.fq.gz -- Cause: java.nio.file.NoSuchFileException: /srv/home/eetlioglu/analyses/emre-etlioglu/bioinformatics/notes/nextflow/the-carpentries-nextflow-practical/data/yeast/reads/ref1_1.fq.gz
+Nov-11 14:03:53.474 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-11 14:03:53.477 [Task submitter] INFO  nextflow.Session - [7b/6e43c6] Submitted process > NUM_LINES (1)
+Nov-11 14:03:53.518 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: NUM_LINES (1); status: COMPLETED; exit: 0; error: -; workDir: /srv/home/eetlioglu/analyses/emre-etlioglu/bioinformatics/notes/nextflow/the-carpentries-nextflow-practical/work/7b/6e43c66c0411de3f00cdaf761bb909]
+Nov-11 14:03:53.530 [main] DEBUG nextflow.Session - Session await > all processes finished
+Nov-11 14:03:53.612 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Nov-11 14:03:53.627 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=1; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=2ms; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=1; peakMemory=0; ]
+Nov-11 14:03:53.687 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Nov-11 14:03:53.726 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Nov-11 14:03:53.727 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

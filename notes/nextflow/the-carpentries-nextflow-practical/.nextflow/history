@@ -1,0 +1,2 @@
+2023-11-11 14:03:52	1.7s	stupefied_kalman	OK	0ab2ae2797722424bc39bea12fff5efa	67aecd00-f37b-4262-a2e8-ebf5c24eb95a	nextflow run wc.nf
+2023-11-11 14:17:34	1.7s	drunk_brenner	OK	ee477d24505ebf875f5eeace0952b9b6	644ce65a-e222-47df-9375-d1d675972f87	nextflow test.nf
