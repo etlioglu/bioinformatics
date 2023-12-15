@@ -11,9 +11,15 @@ format:
 editor: visual
 ---
 
-## RNA-seq
+# RNA-seq
 
-### Report version: 1.0
+The `AzureDevops` repo for this project is located [here](lin-to-the-git-repo) and contains all of the code as well as input and output data, with the exception of large raw data files, which are stored in `Stor9`.
+
+## Info on this report
+
+### Report version:
+
+version-1.0-YYYY-MM-DD
 
 ### What is different from the previous version
 
@@ -24,7 +30,17 @@ The heavy lifting is mainly done by `DESeq2` and this report closely resembles i
 -   [RNA-seq workflow: gene-level exploratory analysis and differential expression](http://master.bioconductor.org/packages/release/workflows/vignettes/rnaseqGene/inst/doc/rnaseqGene.html)
 -   [Analyzing RNA-seq data with DESeq2](https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html)
 
-## 0. Set-up
+## Info on the project
+
+### To-do
+
+### Questions to the researchers
+
+### Hypothesis/Questions from the researchers
+
+Contrasts to be performed:
+
+## Set-up
 
 ```{r set-up}
 
@@ -34,56 +50,23 @@ library(ggplot2)
 source("https://raw.githubusercontent.com/etlioglu/bioinformatics/main/templates/customize-ggplot.r")
 ```
 
-```{r customize-plots}
-
-gradient_col_palette <- viridis(100)
-
-# from scCustomize::ColorBlind_Pal()
-large_disc_col_pal <-
-  c(
-    "#F0A0FFFF",
-    "#0075DCFF",
-    "#993F00FF",
-    "#4C005CFF",
-    "#191919FF",
-    "#005C31FF",
-    "#2BCE48FF",
-    "#FFCC99FF",
-    "#808080FF",
-    "#94FFB5FF",
-    "#8F7C00FF",
-    "#9DCC00FF",
-    "#C20088FF",
-    "#003380FF",
-    "#FFA405FF",
-    "#FFA8BBFF",
-    "#426600FF",
-    "#FF0010FF",
-    "#5EF1F2FF",
-    "#00998FFF",
-    "#E0FF66FF",
-    "#740AFFFF",
-    "#990000FF",
-    "#FFFF80FF",
-    "#FFE100FF",
-    "#FF5005FF"
-  )
-
-options(ggplot2.discrete.colour = large_disc_col_pal)
-theme_set(theme_bw())
-```
-
-## 1. Introduction
-
-### 1.1 Questions/hypotheses from the researcher
-
-Contrasts to be performed:
-
 ## 2. Input to DESeq2
 
 ### 2.1 Read count generation
 
 ### 2.2 Count data
+
+```{r count-data}
+
+count_df <- read.delim("preprocessing/nextflow-output/star_salmon/salmon.merged.gene_counts_length_scaled.tsv")
+rownames(count_df) <- count_df[, 1]
+
+# get rid of the first two columns: ENSEMBL identifiers and gene names
+count_df[, 1:2] <- NULL
+
+# integers are required for the downstream applications
+count_df <- round(count_df)
+```
 
 ### 2.3 Sample meta-data
 
