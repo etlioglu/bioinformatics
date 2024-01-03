@@ -2,6 +2,8 @@
 
 ## General
 
+- `$0` is a special variable and can be used in two ways. i) If run in the terminal, returns the logged in shell. ii) If run in a script, returns the name of the script.
+
 - Deleting BAM files recursively:
 
         find . -name "*.bam" -type f -delete
