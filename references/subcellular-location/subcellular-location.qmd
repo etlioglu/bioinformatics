@@ -1,0 +1,19 @@
+---
+title: "Untitled"
+format:
+    html:
+        embed-resources: true
+---
+
+# SUBCELLULAR LOCATION DATA
+
+Making use of the [`Human Protein Atlas`](https://www.proteinatlas.org/)' [`subcellular_location.tsv.zip`](https://www.proteinatlas.org/download/subcellular_location.tsv.zip):
+
+> Subcellular location of proteins based on immunofluorescently stained cells. The tab-separated file includes the following columns: Ensembl gene identifier ("Gene"), name of gene ("Gene name"), gene reliability score ("Reliability"), enhanced locations ("Enhanced"), supported locations ("Supported"), Approved locations ("Approved"), uncertain locations ("Uncertain"), locations with single-cell variation in intensity ("Single-cell variation intensity"), locations with spatial single-cell variation ("Single-cell variation spatial"), locations with observed cell cycle dependency (type can be one or more of biological definition, custom data or correlation) ("Cell cycle dependency"), Gene Ontology Cellular Component term identifier ("GO id")
+The data is based on The Human Protein Atlas version 23.0 and Ensembl version 109.
+
+```{r}
+# wget https://www.proteinatlas.org/download/subcellular_location.tsv.zip --no-check-certificate
+
+# test <- 
+```
