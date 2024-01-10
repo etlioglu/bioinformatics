@@ -1,11 +1,21 @@
 ---
-title: "Untitled"
+title: "Subcellular location"
+author: "H. Emre Etlioglu"
 format:
-    html:
-        embed-resources: true
+  html:
+    self-contained: true
+    toc: true
+    code-fold: true
+    code-summary: "Show the code"
+    page-layout: full
+editor: visual
 ---
 
 # SUBCELLULAR LOCATION DATA
+
+Subcellular location data from various sources.
+
+## Human Protein Atlas
 
 Making use of the [`Human Protein Atlas`](https://www.proteinatlas.org/)' [`subcellular_location.tsv.zip`](https://www.proteinatlas.org/download/subcellular_location.tsv.zip):
 
@@ -15,5 +25,8 @@ The data is based on The Human Protein Atlas version 23.0 and Ensembl version 10
 ```{r}
 # wget https://www.proteinatlas.org/download/subcellular_location.tsv.zip --no-check-certificate
 
-# test <- 
+library(DT)
+
+hpa <- read.delim("human-protein-atlas/subcellular_location.tsv", header = TRUE, sep = "\t")
+datatable(hpa)
 ```
