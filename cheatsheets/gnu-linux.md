@@ -81,7 +81,7 @@
         # use with sudo for scripts requring root privilages
         crontab -e
 
-- [crontab guru](https://crontab.guru/), helps with cron schedule expressions
+- [crontab guru](https://crontab.guru/) helps with cron schedule expressions
 
 - `sudo crontab -e` for scripts requireing `sudo`
 
