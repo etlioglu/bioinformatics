@@ -44,7 +44,9 @@ Contrasts to be performed:
 
 ```{r set-up}
 
+library(DESeq2)
 library(ggplot2)
+library(EnhancedVolcano)
 
 # customize ggplot
 source("https://raw.githubusercontent.com/etlioglu/bioinformatics/main/templates/customize-ggplot.r")
@@ -74,15 +76,22 @@ count_df <- round(count_df)
 
 ## 3.4 DESeq2 object creation
 
+```{r deseq2-object}
+
+plotDispEsts(dds)
+```
+
 ## 4. Exploratory data analysis
 
 ### 4.1 Pre-filtering
+
+Pre-filtering is not necessary (ref here) but at one point I have seen a Biostar post (or sth like that) that Mike Love was arguing that lowly expressed genes could be effecting the model fit (ref to be added). The plot with the dispersion estimates above should be taken into account.
 
 ### 4.2 variance stabilizing transformation
 
 ```{r vst}
 
-vsd <- vst(dds, blind = TRUE)
+vsd <- vst(dds, blind = FALSE)
 ```
 
 ### 4.3 Sample distances
@@ -94,6 +103,14 @@ vsd <- vst(dds, blind = TRUE)
 #### 4.4.2 Interactive
 
 ## 5. Differential expression analysis
+
+```{r results}
+
+res <- results(dds, contrast = c("condition", "treated", "untreated"))
+
+# to be used for volcano plots
+res_lfc <- lfcShrink(dds, coef="condition_treated_vs_untreated", type="apeglm")
+```
 
 ## 6 Session Info
 
