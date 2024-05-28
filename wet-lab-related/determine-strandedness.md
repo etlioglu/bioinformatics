@@ -19,3 +19,11 @@
         "failed": r"Fraction of reads failed to determine: (\d\.\d+)",
     }
 ```
+
+- From ...
+
+    There are 3 types of cDNA libraries available:
+
+    - Forward (secondstrand) – reads resemble the gene sequence or the secondstrand cDNA sequence
+    - Reverse (firststrand) – reads resemble the complement of the gene sequence or firststrand cDNA sequence (TruSeq)
+    - Unstranded
