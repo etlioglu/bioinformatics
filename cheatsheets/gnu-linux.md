@@ -101,3 +101,25 @@
 - counting reads in a compressed fastq file
 
         zcat my_fastq.gz | echo $((“wc -l"/4))
+
+## ftp
+
+### Uploading data to Array Express (AE)
+
+- Generate `md5sum` hashes for the files to be uploaded
+
+- `cd` into where the files are and connect to the server from that directory
+
+        ftp -p ftp-private-2.ebi.ac.uk
+        
+- After entering the username and password, cd into the directory AE assigns for the project
+                              ─╯
+        ftp> cd lwp0xuk9-2iv16yjkidt7g/
+
+- The following is required to turn off the `interactive` mode, no need to confirm each transfer
+
+        ftp> prompt
+
+- Transfer files with the `muput` command
+
+        ftp> mput *.fq.gz
