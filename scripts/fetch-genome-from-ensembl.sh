@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/usr/bin/bash
+
+# TODO Compare calcualated and downloaded hashes
 
 VERSION="release-112"
 SPECIES="mus_musculus"

@@ -5,6 +5,8 @@ from pathlib import Path
 
 from mailjet_rest import Client
 
+# TODO test
+
 png_path = Path("png-web")
 images = os.listdir(png_path)
 random_image = random.choice(images)
