@@ -4,7 +4,7 @@
 
 - `int`
 - `float`
-- `str` : ordered
+- `str` : ordered, immutable
 - `list` : ordered
 - `dict` : unordered
 - `tup` : ordered, immutable
