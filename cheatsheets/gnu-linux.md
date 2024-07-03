@@ -2,7 +2,21 @@
 
 ## General
 
+- preferred shebang line:
+
+        #!/usr/bin/env bash
+
+  This checks the `$PATH` variable and uses the first `bash` found
+
 - `$0` is a special variable and can be used in two ways. i) If run in the terminal, returns the logged in shell. ii) If run in a script, returns the name of the script.
+
+- preferred way of reading a file:
+
+        file_content="$(< file.txt)"
+
+- Declaring a constant
+
+        declare -r some_variable_that_will_not_change=...
 
 - Deleting BAM files recursively:
 
