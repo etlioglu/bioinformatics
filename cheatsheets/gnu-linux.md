@@ -100,14 +100,13 @@
 
 ## ftp
 
-### Uploading data to Array Express (AE)
+### Uploading data to Array Express (AE)``
 
 - Generate `md5sum` hashes for the files to be uploaded
 
 - `cd` into where the files are and connect to the server from that directory
 
         ftp -p ftp-private-2.ebi.ac.uk
-
 
 - After entering the username and password, cd into the directory AE assigns for the project
   ─╯
@@ -140,3 +139,29 @@
 
         # `-l` means login
         su –l <other_user_name>
+
+## Globbing
+
+- basically re-writing commands via wildcards
+  - wildcards should not be surrounded by quotes
+  - `*`
+    - 0 to any number of charact
+  - `?`
+    - exactly one character
+  - `[0-9]`
+    - exactly one digit
+  - `**`
+    - useful for recursive searches
+  - regular expressions are not used
+
+## Bash
+
+- `/bin/[` and `/bin/test` are programmes and `[[ .. ]]` is a shell built-in. The latter is preferred in the scripts.
+
+- path to the script that is being run
+
+        ${BASH_SOURCE[0]}
+
+- folder where the script is located
+
+        dirname -- ${BASH_SOURCE[0]}
